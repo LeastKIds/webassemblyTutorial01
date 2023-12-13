@@ -2,7 +2,9 @@ version: "3"
 
 services:
   webassembly:
-    image: emscripten/emsdk
+    build: 
+      context: ./dockerfile
+      dockerfile: Dockerfile
     volumes:
       - .:/app
     ports:
