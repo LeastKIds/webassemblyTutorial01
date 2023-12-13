@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var Module = {
+            onRuntimeInitialized: function() {
+                const myClass = new Module.Anaylsis(33);
+                form.before.value = myClass.m_val;
+
+                myClass.setPlus(44);
+                form.after.value = myClass.m_val;
+
+                form.squareVal.value = myClass.squareValue();
+            }
+        }
+    </script>
+    <script src="call_cpp.js"></script>
+</head>
+<body>
+    
+    <form method="get" id="form" onsubmit="return false;">
+        BEFFORE : <input type="text" name="before" size="10"> <br/>
+        AFTER : <input type="text" name="after" size="10"> <br/>
+        SQUARE : <input type="text" name="squareVal" size="10"> <br/>
+    </form>
+
+</body>
+</html>
