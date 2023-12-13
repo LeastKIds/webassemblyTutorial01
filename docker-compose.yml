@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  webassembly:
+    image: emscripten/emsdk
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    container_name: webassemblyTutorial01
+    command: sleep infinity
